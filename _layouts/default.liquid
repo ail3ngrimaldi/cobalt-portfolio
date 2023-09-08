@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include "head.liquid" %}
+    </head>
+    <body data-route={{ page.data.route }}>
+      {% include "header.liquid" %}
+    <main>
+      {{ page.content }}
+      {% include "scroll.liquid" %}
+    </main>
+      {% include "footer.liquid" %}
+  </body>
+</html>
+

@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after  {
+  box-sizing: border-box;
+  outline: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+  
+html,
+body {
+	height: 100vh;
+}
+
+body {
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-family: var(--ff-primary);
+}
+
+a { text-decoration: none;}
+
+button {
+	padding: .525em;
+    border-radius: 10px;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    background: var(--dark-color);
+    border: 2px solid var(--light-color);
+    z-index: 999;
+}
+
+button a { color: var(--light-color); }
+
+button> a:hover { color: var(--dark-color); }
+button:hover,
+button:focus { background-color: var(--light-color); }

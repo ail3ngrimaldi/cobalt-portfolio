@@ -1,0 +1,110 @@
+header { 
+	background-color: var(--dark-color);
+    box-shadow: 0px 1px 2px 0px rgb(0, 0, 0);
+    height: var(--nav-height);
+	position: fixed;
+	width: 100%;
+}
+
+nav {  
+    display: flex;
+	flex-grow: 1;
+	align-items: end;
+	flex-basis: 100%;
+}
+
+ul {  
+	list-style: none;
+	display: flex;
+	flex-grow: 1;
+	margin: 0;
+	padding: 0 1rem;
+    font-family: var(--ff-primary);
+	font-weight: 600;
+    font-size: 1rem;
+	align-items: end;
+}
+
+li:nth-of-type(5) {
+	margin-left: auto;
+	margin-right: 1rem;
+}
+
+li a:not(.button) {
+    padding: 1.20rem;
+    color: var(--light-color);
+    transition: background-color 0.3s;
+}
+
+a:not(.button):hover,
+a:not(.button):focus { 
+    background-color: var(--mid-color);
+    color: var(--dark-color);
+}
+
+/*Navegacion mobile*/
+
+@media screen and (max-width: 48rem) {
+	nav[aria-label="Principal"] { display: none; }
+}
+
+@media screen and (min-width: 48rem) {
+	#menu-icon { display: none; }
+}
+
+#menu-icon { position: absolute; right: 10px; top: 10px; }
+
+#menu-dropdown {
+    background-color: var(--dark-color);
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	transform: translateY(-100%);
+    transform-origin: top center;
+    transition: transform .7s ease-in-out;
+    z-index: 999;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+	padding: 5rem 0;
+}
+
+#menu-icon:focus + #menu-dropdown, #menu-dropdown:focus-within {
+    top: 0;
+	transform: translateY(0);
+}
+
+#menu-dropdown a {
+	display: flex;
+	position: relative;
+	color: var(--clr-green-darker);
+}
+
+#menu-dropdown a.close-menu {
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#menu-dropdown a.close-menu::before,
+#menu-dropdown a.close-menu::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+	background-color: var(--clr-green-darker);
+    transform: rotate(45deg);
+}
+#menu-dropdown a.close-menu::before { transform: rotate(-45deg); }
+
+#menu-dropdown:target {
+    display: none;
+}

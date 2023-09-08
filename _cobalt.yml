@@ -1,0 +1,10 @@
+
+template_extensions:
+  - md
+  - liquid
+site:
+  title: Ailen Grimaldi - Web Developer
+  description: New portfolio created using cobalt to improve the user experience while navigating through it.
+  base_url: http://example.com
+posts:
+  rss: rss.xml

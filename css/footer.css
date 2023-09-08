@@ -1,0 +1,15 @@
+footer { 
+	background-color: var(--dark-color);
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	color: var(--light-color);
+	padding: 2rem;
+	gap: 1em;
+}
+
+footer a { color: var(--light-color); transition: color .3s ease-in-out, font-weight .3s ease-in-out;}
+footer a:hover,
+footer a:focus { color: var(--brand-color); font-weight: 800; }

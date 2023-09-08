@@ -1,0 +1,14 @@
+:root {
+	/*typographies*/
+	--ff-titles: 'Abril fatface';
+	--ff-primary: 'Quicksand', sans-serif;
+	--ff-secondary: 'Exo', sans-serif;
+	/*colors*/ 
+	--brand-color: #C084FC;
+	--dark-color: #111827;
+	--mid-color: #BDA9D4;
+	--light-color: #FAF5FF;
+	--brand-dark-color: #9d3bff;
+	/*sizes*/
+	--nav-height: 4rem;
+  }

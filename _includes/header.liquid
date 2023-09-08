@@ -1,0 +1,27 @@
+<header>
+	<nav aria-label="Principal">
+		<ul>
+			<li><a {% if page.data.route == "home"%}current{%endif%}" href="/">Home</a></li>
+			<li><a {% if page.data.route == "about"%}current{%endif%}" href="/about/">About me</a></li>
+			<li><a {% if page.data.route == "projects"%}current{%endif%}" href="/projects/">Projects</a></li>
+			<li><a {% if page.data.route == "services"%}current{%endif%}" href="/services/">Services</a></li>
+			<li><button><a class="button">Contact me</a></button></li>
+		</ul>
+	</nav>
+	<a id="menu-icon" class="menu-icon" aria-label="Abrir menú" tabindex="1">
+		<svg width="30" height="30" viewBox="-2 -2 34 34" aria-labelledby="Icono menu mobile">
+			<title id="Icono menu mobile">Menu mobile</title>
+			<line x1="2" y1="7" x2="28" y2="7" stroke="#FAF5FF" stroke-width="3" stroke-linecap="round"/>
+			<line x1="28" y1="17" x2="15" y2="17" stroke="#FAF5FF" stroke-width="3" stroke-linecap="round"/>
+			<line x1="2" y1="27" x2="28" y2="27" stroke="#FAF5FF" stroke-width="3" stroke-linecap="round"/>
+		</svg>
+	</a>
+	<nav id="menu-dropdown" aria-label="Secundaria">
+		<ul>
+		    <li><a href="#home">Home</a></li>
+			<li><a href="#about">About me</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#services">Services</a></li>
+		</ul>
+	</nav>
+</header>
